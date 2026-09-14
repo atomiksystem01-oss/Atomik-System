@@ -84,6 +84,8 @@ nav{border-bottom:1px solid var(--line);background:rgba(20,16,24,.9);backdrop-fi
 .buybar .count .lbl{display:none}
 .buybar .count .unit{padding:2px 5px;min-width:28px;font-size:13px}
 :focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.rzp-form{width:100%;max-width:380px}
+.buybar .rzp-form-bar{max-width:230px;flex:0 0 auto}
 
 /* ---------- hero ---------- */
 .hero{padding-top:clamp(34px,6vw,58px)}
