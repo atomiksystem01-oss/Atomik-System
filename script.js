@@ -38,10 +38,18 @@ window.addEventListener('resize', sync);
 sync();
 
 // relay clicks on the styled CTAs to the hidden Razorpay payment button
+var RZP_FALLBACK_URL = 'https://razorpay.com/payment-button/pl_TbvFVlayJX8p6w/view/';
 document.querySelectorAll('.rzp-trigger').forEach(function(btn){
   btn.addEventListener('click', function(e){
     e.preventDefault();
-    var rzpBtn = document.querySelector('#rzpHidden .razorpay-payment-button a, #rzpHidden a');
-    if (rzpBtn) rzpBtn.click();
+    var tries = 0;
+    (function tryClick(){
+      var rzpBtn = document.querySelector('#rzpHidden a');
+      if (rzpBtn) { rzpBtn.click(); return; }
+      tries++;
+      if (tries < 20) { setTimeout(tryClick, 150); return; }
+      // Razorpay script never loaded (blocked/offline) — open its hosted page directly
+      window.open(RZP_FALLBACK_URL, '_blank', 'noopener');
+    })();
   });
 });
