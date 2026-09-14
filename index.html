@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World's Biggest Video Editing Bundle. 50,000+ assets in one download</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141018;
+  --panel:#1E1926;
+  --panel-2:#272132;
+  --line:#332C40;
+  --cream:#F4EFE6;
+  --muted:#9B93A8;
+  --orange:#FF4A23;
+  --orange-dark:#E13A16;
+  --teal:#3FD9C0;
+  --display:"Bricolage Grotesque",Georgia,serif;
+  --body:"Inter Tight",system-ui,-apple-system,sans-serif;
+  --pad:clamp(18px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);color:var(--cream);font-family:var(--body);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  padding-bottom:96px;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1120px,100%);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+section{padding:clamp(48px,8vw,88px) 0}
+
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(34px,7vw,64px)}
+h2{font-size:clamp(27px,4.6vw,44px);margin-bottom:14px}
+h3{font-size:clamp(18px,2.4vw,22px);font-weight:600;letter-spacing:-.01em}
+p{max-width:62ch}
+.lead{color:var(--muted);font-size:clamp(16px,2.1vw,18.5px)}
+
+/* timeline ruler divider */
+.ruler{height:14px;width:100%;
+  background-image:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 14px);
+  border-bottom:1px solid var(--line);opacity:.9}
+
+/* ---------- announcement ---------- */
+.ticker{background:var(--orange);color:#fff;font-size:13.5px;font-weight:600;
+  padding:9px 0;overflow:hidden;white-space:nowrap}
+.ticker span{display:inline-block;padding-right:40px}
+.ticker-in{display:inline-block;animation:slide 26s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- nav ---------- */
+nav{border-bottom:1px solid var(--line);background:rgba(20,16,24,.9);backdrop-filter:blur(8px);
+  position:sticky;top:0;z-index:40}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:13px;padding-bottom:13px}
+.logo{font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+.logo i{width:11px;height:11px;background:var(--orange);border-radius:2px;display:block}
+.nav-price{font-size:14px;color:var(--muted)}
+.nav-price b{color:var(--cream);font-size:16px}
+.nav-price s{margin-right:6px}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;overflow:hidden;isolation:isolate;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(180deg,#FF6A42,#FF4A23 55%,#EE3D18);color:#fff;border:0;
+  border-radius:999px;cursor:pointer;
+  font-family:var(--body);font-weight:700;font-size:17px;padding:17px 32px;
+  text-decoration:none;width:100%;max-width:380px;
+  box-shadow:0 0 0 1px rgba(255,138,105,.45) inset,0 6px 22px rgba(255,74,35,.34),0 0 46px rgba(255,74,35,.18);
+  transition:box-shadow .22s ease,transform .1s ease,filter .2s ease;
+  animation:pulse 2.8s ease-in-out infinite}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:42%;left:-60%;z-index:-1;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.42),transparent);
+  transform:skewX(-18deg);animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%{left:-60%}45%{left:130%}100%{left:130%}}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 1px rgba(255,138,105,.45) inset,0 6px 22px rgba(255,74,35,.34),0 0 46px rgba(255,74,35,.18)}
+  50%{box-shadow:0 0 0 1px rgba(255,160,130,.6) inset,0 8px 28px rgba(255,74,35,.5),0 0 70px rgba(255,74,35,.3)}}
+.btn:hover{filter:brightness(1.06)}
+.btn:active{transform:translateY(1px)}
+.under-btn{font-size:13.5px;color:var(--muted);margin-top:11px}
+.count{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:14px;
+  background:rgba(255,74,35,.08);border:1px solid rgba(255,74,35,.32);border-radius:10px;padding:10px 12px}
+.count .lbl{font-size:13px;color:var(--cream);font-weight:600}
+.count .clock{display:flex;gap:5px}
+.count .unit{background:var(--ink);border-radius:6px;padding:4px 7px;min-width:34px;text-align:center;
+  font-family:var(--display);font-weight:800;font-size:16px;line-height:1.2;color:var(--orange)}
+.count .unit i{display:block;font-style:normal;font-size:8.5px;font-weight:500;color:var(--muted);
+  letter-spacing:.04em;font-family:var(--body)}
+.buybar .count{margin:0;padding:5px 8px;border:0;background:transparent}
+.buybar .count .lbl{display:none}
+.buybar .count .unit{padding:2px 5px;min-width:28px;font-size:13px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(34px,6vw,58px)}
+.strip{height:7px;width:100%;margin-bottom:26px;border-radius:2px;
+  background:linear-gradient(90deg,#FF4A23,#FFB020 22%,#3FD9C0 48%,#5B7CFF 72%,#E8408A)}
+.hero h1{margin-bottom:18px;max-width:16ch}
+.hero .lead{margin-bottom:26px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,56px);align-items:start}
+.badge-row{display:flex;flex-wrap:wrap;align-items:stretch;margin-bottom:22px;
+  border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);width:fit-content}
+.badge{font-size:12.5px;font-weight:600;color:var(--cream);padding:9px 15px;
+  border-right:1px solid var(--line);display:flex;align-items:center;gap:7px;white-space:nowrap}
+.badge:last-child{border-right:0}
+.badge::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--teal);flex:0 0 5px}
+.rating{display:flex;align-items:center;gap:14px;margin:0 0 16px;max-width:52ch;
+  border-left:2px solid var(--teal);padding:4px 0 4px 16px}
+.rating .num{font-family:var(--display);font-size:clamp(52px,7vw,68px);font-weight:800;line-height:.82;
+  color:var(--teal);letter-spacing:-.04em;flex:0 0 auto}
+.rating .txt{font-size:13.5px;color:var(--muted);line-height:1.4}
+.rating .txt b{display:block;color:var(--cream);font-weight:600;font-size:clamp(17px,2.2vw,20px);
+  font-family:var(--display);letter-spacing:-.015em;line-height:1.05;margin-bottom:4px}
+.stars{color:#FFB020;letter-spacing:2px;font-size:15px}
+
+/* price box */
+.pricebox{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.price-line{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price-now{font-family:var(--display);font-size:clamp(38px,6vw,52px);font-weight:800;letter-spacing:-.03em}
+.price-old{color:var(--muted);text-decoration:line-through;font-size:19px}
+.price-off{background:var(--orange);color:#fff;font-size:12.5px;font-weight:700;padding:4px 9px;border-radius:5px}
+.price-note{color:var(--muted);font-size:13.5px;margin:6px 0 18px}
+.tick-list{list-style:none;margin-top:18px;display:grid;gap:9px}
+.tick-list li{font-size:14.5px;display:flex;gap:10px;align-items:flex-start;color:var(--cream)}
+.tick-list li::before{content:"";flex:0 0 16px;height:16px;margin-top:4px;border-radius:50%;
+  background:var(--teal);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 5' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 5' fill='none' stroke='%23000' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat}
+
+/* video */
+.video{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative}
+.video iframe{width:100%;height:100%;border:0;display:block}
+.video-cap{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* video facade */
+.video{position:relative}
+.vplay{position:absolute;inset:0;width:100%;border:0;padding:0;cursor:pointer;color:var(--cream);
+  background:radial-gradient(120% 120% at 50% 0%,#2A2233 0%,#151019 70%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  font-family:var(--body);animation:none}
+.vplay .strip-top{position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,#FF4A23,#FFB020 22%,#3FD9C0 48%,#5B7CFF 72%,#E8408A)}
+.vplay .disc{width:66px;height:66px;border-radius:50%;background:var(--orange);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 30px rgba(255,74,35,.45),0 0 0 8px rgba(255,74,35,.14)}
+.vplay .disc::after{content:"";border-left:20px solid #fff;border-top:12px solid transparent;
+  border-bottom:12px solid transparent;margin-left:5px}
+.vplay b{font-family:var(--display);font-size:clamp(16px,2.4vw,20px);font-weight:600;letter-spacing:-.01em}
+.vplay span{font-size:13px;color:var(--muted)}
+.vplay:hover .disc{transform:scale(1.06)}
+.vplay .disc{transition:transform .18s ease}
+
+/* counters */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.counters div{padding:22px 16px;border-right:1px solid var(--line)}
+.counters div:last-child{border-right:0}
+.counters b{display:block;font-family:var(--display);font-size:clamp(22px,3.4vw,32px);font-weight:800;letter-spacing:-.02em}
+.counters span{font-size:12.5px;color:var(--muted)}
+
+/* ---------- inventory ---------- */
+.inv{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:26px}
+.inv .cell{background:var(--panel);padding:15px 16px;display:flex;gap:11px;align-items:flex-start}
+.inv .cell:hover{background:var(--panel-2)}
+.inv em{font-style:normal;font-size:19px;line-height:1.2}
+.inv .t{font-size:14.5px;font-weight:600;line-height:1.35}
+.inv .s{font-size:12.5px;color:var(--muted);display:block;font-weight:400}
+
+/* proof screenshots */
+.proof{margin-top:34px}
+.proof-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:18px}
+.shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+.shot-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);
+  font-size:13px;color:var(--muted)}
+.shot-bar i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
+.shot-bar i:first-child{background:#FF5F57}.shot-bar i:nth-child(2){background:#FEBC2E}.shot-bar i:nth-child(3){background:#28C840}
+.shot-bar b{margin-left:8px;color:var(--cream);font-weight:600}
+.shot img{width:100%;height:auto;display:block}
+.proof-note{font-size:13px;color:var(--muted);margin-top:12px}
+.proof-grid{gap:22px}
+
+/* bonus */
+.bonus{background:var(--panel);border:1px dashed rgba(255,74,35,.5);border-radius:14px;padding:clamp(22px,4vw,34px)}
+.bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:20px}
+.bonus-item{border-left:2px solid var(--orange);padding-left:14px}
+.bonus-item b{display:block;font-size:15.5px}
+.bonus-item span{font-size:13px;color:var(--muted)}
+
+/* value stack */
+.stack{width:100%;border-collapse:collapse;margin-top:22px;font-size:15px}
+.stack td{padding:13px 4px;border-bottom:1px solid var(--line)}
+.stack td:last-child{text-align:right;color:var(--muted);white-space:nowrap}
+.stack tr.total td{border-bottom:0;padding-top:18px;font-weight:700;font-size:17px;color:var(--cream)}
+.stack tr.pay td{color:var(--teal);font-weight:700;font-size:18px;border-top:1px solid var(--line)}
+.stack tr.pay s{color:var(--muted);font-weight:400;font-size:15px;margin-right:8px}
+
+/* benefits */
+.bens{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:16px;margin-top:30px}
+.ben{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 22px;
+  position:relative;overflow:hidden;transition:border-color .2s ease,background .2s ease}
+.ben::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--orange),transparent 70%);opacity:.55}
+.ben:hover{border-color:rgba(63,217,192,.4);background:var(--panel-2)}
+.ben .ico{width:34px;height:34px;border-radius:9px;background:rgba(63,217,192,.12);color:var(--teal);
+  display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:14px}
+.ben h3{margin-bottom:7px}
+.ben p{color:var(--muted);font-size:14.5px}
+
+/* steps (real sequence -> numbered) */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:28px;counter-reset:s}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:15px;
+  color:var(--ink);background:var(--teal);width:26px;height:26px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+.step p{color:var(--muted);font-size:14.5px;margin-top:6px}
+
+/* faq */
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 30px 18px 0;font-weight:600;font-size:16.5px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:15px;font-size:22px;color:var(--muted);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);padding-bottom:18px;font-size:15px}
+
+/* guarantee */
+.guar{background:linear-gradient(180deg,rgba(63,217,192,.09),rgba(63,217,192,.02));
+  border:1px solid rgba(63,217,192,.35);border-radius:16px;padding:clamp(22px,4vw,36px);
+  box-shadow:0 0 60px rgba(63,217,192,.07)}
+.guar-head{display:flex;gap:20px;align-items:center}
+.guar-head h2{margin-bottom:6px}
+.guar-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;
+  margin-top:26px;padding-top:24px;border-top:1px solid rgba(63,217,192,.22)}
+.gp b{display:block;font-size:14.5px;margin-bottom:3px}
+.gp span{font-size:13px;color:var(--muted);display:block;line-height:1.5}
+.gp .ico{width:26px;height:26px;border-radius:7px;background:rgba(63,217,192,.14);color:var(--teal);
+  display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:9px}
+.guar .seal{flex:0 0 76px;width:76px;height:76px;border-radius:50%;
+  border:2px solid var(--teal);color:var(--teal);background:rgba(63,217,192,.07);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  font-family:var(--display);text-align:center}
+.guar .seal b{font-size:26px;font-weight:800;line-height:1}
+.guar .seal span{font-size:10.5px;font-weight:600;letter-spacing:.08em;line-height:1;font-family:var(--body)}
+.guar p{color:var(--muted);font-size:14.5px;margin-top:6px}
+
+/* final cta */
+.final{text-align:center;border-top:1px solid var(--line)}
+.final h2{max-width:18ch;margin-inline:auto}
+.final p{margin-inline:auto;margin-bottom:26px}
+.final .btn{margin-inline:auto}
+.pay-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px;font-size:12.5px;color:var(--muted)}
+.pay-row span{border:1px solid var(--line);padding:5px 11px;border-radius:6px}
+.rzp{display:flex;align-items:center;justify-content:center;gap:11px;margin-top:18px;
+  font-size:13px;color:var(--muted)}
+.rzp img{height:20px;width:auto;opacity:.92}
+.rzp-note{font-size:12.5px;color:var(--muted);max-width:46ch;margin:10px auto 0;text-align:center}
+
+footer .wrap{padding-top:34px;padding-bottom:34px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+footer a{text-decoration:none}
+footer a:hover{color:var(--cream)}
+
+/* ---------- sticky buy bar ---------- */
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(30,25,38,.97);
+  backdrop-filter:blur(10px);border-top:1px solid var(--line);
+  transform:translateY(110%);transition:transform .25s ease;padding:11px var(--pad) calc(11px + env(safe-area-inset-bottom))}
+.buybar.show{transform:translateY(0)}
+.buybar-in{width:min(1120px,100%);margin:0 auto;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.bb-price b{font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:-.02em}
+.bb-price s{color:var(--muted);font-size:14px;margin-left:7px}
+.bb-price{flex:0 0 auto}
+.bb-price span{display:block;font-size:12px;color:var(--teal);white-space:nowrap}
+.buybar .btn{width:auto;min-width:230px;padding:15px 26px}
+.stock{font-size:12px;color:var(--muted);margin-top:4px}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .counters{grid-template-columns:repeat(2,1fr)}
+  .counters div:nth-child(2){border-right:0}
+  .counters div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width:620px){
+  body{padding-bottom:88px}
+  h1,h2,h3,p,.lead{text-align:center}
+  p,.lead,.hero h1,.final h2,.final p{margin-left:auto;margin-right:auto}
+  .price-line{justify-content:center}
+  .badge-row{margin-left:auto;margin-right:auto;width:100%;justify-content:center}
+  .badge{flex:1;justify-content:center;padding:9px 8px;font-size:11.5px}
+  .rating{flex-direction:column;gap:8px;text-align:center;border-left:0;border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);padding:18px 0;margin-left:auto;margin-right:auto;width:100%}
+  .rating .num{font-size:30px}
+  .ben .ico{margin-left:auto;margin-right:auto}
+  .pricebox{text-align:center}
+  .tick-list li{text-align:left}
+  .bonus-item{border-left:0;border-top:2px solid var(--orange);padding-left:0;padding-top:12px;text-align:center}
+  .stack td{text-align:left}
+  .stack td:last-child{text-align:right}
+  .stack{font-size:14px}
+  .step::before{margin-left:auto;margin-right:auto}
+  .guar{text-align:center}
+  .guar-head{flex-direction:column;gap:14px}
+  .guar .seal{margin:0 auto}
+  .gp .ico{margin-left:auto;margin-right:auto}
+  summary{text-align:left;padding-right:34px}
+  details p{text-align:left}
+  .bb-price{text-align:left}
+  .nav-price{display:none}
+  .buybar-in{gap:10px}
+  .buybar .btn{min-width:0;flex:1 1 auto;font-size:15px;padding:13px 14px;white-space:nowrap}
+  .bb-price b{font-size:19px}
+  .bb-price s{font-size:12px;margin-left:5px}
+  .bb-price span{font-size:9.5px;letter-spacing:-.01em;line-height:1.3;margin-top:1px}
+  .btn{max-width:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,.btn::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .buybar{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker" role="status">
+  <div class="ticker-in">
+    <span>Launch price ends soon · 98% off</span><span>Instant download after payment</span><span>One-time payment, lifetime access</span><span>Works with Premiere Pro, After Effects, CapCut, DaVinci, Final Cut</span>
+    <span>Launch price ends soon · 98% off</span><span>Instant download after payment</span><span>One-time payment, lifetime access</span><span>Works with Premiere Pro, After Effects, CapCut, DaVinci, Final Cut</span>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="logo"><i></i>The Editor's Vault</div>
+    <div class="nav-price">Today <s>₹6,999</s> <b>₹99</b></div>
+    <a href="#buy" class="btn" style="width:auto;padding:11px 22px;font-size:15px">Get the bundle</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="strip"></div>
+    <div class="hero-grid">
+      <div>
+        <div class="badge-row">
+          <span class="badge">50,000+ files</span>
+          <span class="badge">Royalty-free</span>
+          <span class="badge">Any editing app</span>
+        </div>
+        <h1>Every asset you'll ever need to edit, in one download.</h1>
+        <p class="lead">FX presets, sound effects, transitions, LUTs, overlays, fonts, stock footage and a full editing course. Collected over 6 years of professional editing, then cleaned up and sorted into one drive folder.</p>
+
+        <div class="pricebox" id="buy">
+          <div class="price-line">
+            <span class="price-now">₹99</span>
+            <s class="price-old">₹6,999</s>
+            <span class="price-off">SAVE 98%</span>
+          </div>
+          <p class="price-note">One-time payment. No subscription, no renewals.</p>
+          <a href="#checkout" class="btn">Get instant access →</a>
+
+          <div class="count" data-count>
+            <span class="lbl">Offer ends in</span>
+            <span class="clock">
+              <span class="unit" data-h>00<i>HRS</i></span>
+              <span class="unit" data-m>00<i>MIN</i></span>
+              <span class="unit" data-s>00<i>SEC</i></span>
+            </span>
+          </div>
+          <p class="under-btn">Download link opens the moment your payment goes through.</p>
+          <ul class="tick-list">
+            <li>Lifetime access, including all future updates</li>
+            <li>Unlimited use on client and commercial projects</li>
+            <li>Delivered as sorted folders, not one messy zip file</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="rating rating-top">
+          <span class="num">6</span>
+          <span class="txt"><b>years of collecting</b>Sorted, cleaned and named. One folder you keep open while you edit.</span>
+        </div>
+        <div class="video" id="vwrap">
+          <button class="vplay" id="vplay" aria-label="Play the bundle walkthrough video">
+            <span class="strip-top"></span>
+            <span class="disc"></span>
+            <b>Inside the bundle: full folder walkthrough</b>
+            <span>Tap to play</span>
+          </button>
+        </div>
+        <p class="video-cap">A quick walk through the actual folders you get. Nothing hidden.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap"><div class="counters">
+  <div><b>29</b><span>asset packs</span></div>
+  <div><b>50,000+</b><span>individual files</span></div>
+  <div><b>7-day</b><span>money-back promise</span></div>
+  <div><b>₹99</b><span>paid once</span></div>
+</div></div>
+
+<div class="ruler"></div>
+
+<section>
+  <div class="wrap">
+    <h2>What's in the folder</h2>
+    <p class="lead">29 packs, each sorted into labelled sub-folders so you can drag straight into your timeline.</p>
+
+    <div class="inv" id="inv">
+      <div class="cell"><em>🎬</em><div class="t">FX Presets<span class="s">2,000+ drag-and-drop effects</span></div></div>
+      <div class="cell"><em>🔊</em><div class="t">Sound Effects<span class="s">3,000+ whooshes, impacts, foley</span></div></div>
+      <div class="cell"><em>🎵</em><div class="t">Royalty-Free Music<span class="s">1,000+ tracks, safe to monetise</span></div></div>
+      <div class="cell"><em>🔄</em><div class="t">Transitions<span class="s">800+ zooms, glitches, warps</span></div></div>
+      <div class="cell"><em>🎨</em><div class="t">Cinematic LUTs<span class="s">200+ colour grades</span></div></div>
+      <div class="cell"><em>🔤</em><div class="t">Fonts Collection<span class="s">10,000+ display &amp; body fonts</span></div></div>
+      <div class="cell"><em>📺</em><div class="t">Lower Thirds<span class="s">1,500+ name &amp; title bars</span></div></div>
+      <div class="cell"><em>📹</em><div class="t">Stock Videos<span class="s">500+ 4K clips</span></div></div>
+      <div class="cell"><em>🧰</em><div class="t">After Effects Plugins<span class="s">100+ installers &amp; scripts</span></div></div>
+      <div class="cell"><em>💍</em><div class="t">Wedding Title Pack<span class="s">Editable names &amp; dates</span></div></div>
+      <div class="cell"><em>💌</em><div class="t">Wedding Invitation Pack<span class="s">Animated invite templates</span></div></div>
+      <div class="cell"><em>🎓</em><div class="t">Video Editing Course<span class="s">Beginner to client-ready</span></div></div>
+
+      <div class="cell"><em>🎞️</em><div class="t">4K Film Grain<span class="s">Real scanned grain overlays</span></div></div>
+      <div class="cell"><em>🔥</em><div class="t">Fire &amp; Spark Overlays<span class="s">Alpha-channel ready</span></div></div>
+      <div class="cell"><em>🌧️</em><div class="t">Rain Overlays<span class="s">Light drizzle to heavy storm</span></div></div>
+      <div class="cell"><em>💨</em><div class="t">Smoke Overlays<span class="s">Fog, haze, atmosphere</span></div></div>
+      <div class="cell"><em>❄️</em><div class="t">Dust &amp; Snow Overlays<span class="s">Adds depth to flat shots</span></div></div>
+      <div class="cell"><em>⚡</em><div class="t">Glitch Effects<span class="s">RGB split, VHS, datamosh</span></div></div>
+      <div class="cell"><em>🌟</em><div class="t">Lens &amp; Bokeh Overlays<span class="s">Flares, blur shapes</span></div></div>
+      <div class="cell"><em>💡</em><div class="t">Light Leak Overlays<span class="s">Warm analog leaks</span></div></div>
+      <div class="cell"><em>🧩</em><div class="t">Logo Animation Pack<span class="s">Drop your logo, render</span></div></div>
+      <div class="cell"><em>🖼️</em><div class="t">Backgrounds<span class="s">100+ looping &amp; still</span></div></div>
+      <div class="cell"><em>✨</em><div class="t">Animated Title Pack<span class="s">Kinetic typography</span></div></div>
+      <div class="cell"><em>🎥</em><div class="t">Camera Rig Overlays<span class="s">Viewfinder, REC frames</span></div></div>
+      <div class="cell"><em>😍</em><div class="t">Animated Emojis<span class="s">200+ for reels &amp; shorts</span></div></div>
+      <div class="cell"><em>📢</em><div class="t">Callout Graphics<span class="s">100+ arrows, pointers, tags</span></div></div>
+      <div class="cell"><em>▶️</em><div class="t">YouTube Essentials<span class="s">Intros, end screens, subs</span></div></div>
+      <div class="cell"><em>🎭</em><div class="t">Motion Graphics Pack<span class="s">Shapes, elements, scenes</span></div></div>
+      <div class="cell"><em>😂</em><div class="t">Viral Meme Pack<span class="s">Clips &amp; sounds for reels</span></div></div>
+    </div>
+
+    <div class="proof">
+      <h3>This is the actual folder you get</h3>
+      <p class="lead" style="font-size:15.5px;margin-top:6px">Screenshots straight from the shared drive. Every pack sits in its own named folder, so you find things fast.</p>
+      <div class="proof-grid">
+        <div class="shot">
+          <div class="shot-bar"><i></i><i></i><i></i><b>Video Editing Bundle</b></div>
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5Ojf/2wBDAQoKCg0MDRoPDxo3JR8lNzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzf/wAARCAMqBdwDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAMEAgUGAQcI/8QAWBAAAQMDAQUFBAQLBQYEBAILAQACAwQFERIGEyExURRBUmGRIjJxoQcVVYEWIzQ1QnJzk5TB0jNTVLLRJDZidJKxF0OCo6Kz4fAlVmN1wiZGg4SVtMPT/8QAGwEBAQEBAQEBAQAAAAAAAAAAAAECAwQFBgf/xAAwEQEBAQACAQIFAwMDBAMAAAAAEQECAxIEEyExQVFSFBVxYbHwBTLRIpHB4SNiof/aAAwDAQACEQMRAD8A+2IiLSCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAvEX58bW7VbS2D7T7fs/s/tpdaiz2yro4b1Ld7m9jmt0jU5rWYyQ8ODQzVl2ScjC+p4I70HqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEHqLxEH//2Q==" alt="Google Drive folder showing overlays, LUTs, presets and sound effects" loading="lazy">
+        </div>
+      </div>
+      <p class="proof-note">Access is shared to your email right after payment. Download the whole folder or only the packs you need.</p>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="bonus">
+      <h2 style="margin-bottom:6px">Four bonuses, added free</h2>
+      <p class="lead">Included with every order during the launch period.</p>
+      <div class="bonus-grid">
+        <div class="bonus-item"><b>1,500+ Motivational Reels</b><span>Ready-to-post, editable</span></div>
+        <div class="bonus-item"><b>ChatGPT Prompt Collection</b><span>Scripts, hooks, captions</span></div>
+        <div class="bonus-item"><b>E-Books Collection</b><span>Editing &amp; creator business</span></div>
+        <div class="bonus-item"><b>Instagram Growth Course</b><span>Turn edits into clients</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ruler"></div>
+
+<section>
+  <div class="wrap" style="max-width:760px">
+    <h2>What this would cost you separately</h2>
+    <p class="lead">Rough market rates for the same categories, bought individually.</p>
+    <table class="stack">
+      <tr><td>FX presets + transitions</td><td>₹2,400</td></tr>
+      <tr><td>Sound effects + music library</td><td>₹1,800</td></tr>
+      <tr><td>LUTs, overlays &amp; film grain</td><td>₹1,200</td></tr>
+      <tr><td>Fonts, titles &amp; lower thirds</td><td>₹1,500</td></tr>
+      <tr><td>Stock footage + motion graphics</td><td>₹2,000</td></tr>
+      <tr><td>Video editing course</td><td>₹1,999</td></tr>
+      <tr><td>Bonuses (reels, prompts, e-books, IG course)</td><td>₹1,500</td></tr>
+      <tr class="total"><td>Total value</td><td>₹12,399</td></tr>
+      <tr class="pay"><td>You pay today</td><td><s>₹12,399</s> ₹99</td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="ruler"></div>
+
+<section>
+  <div class="wrap">
+    <h2>Why editors keep this folder open</h2>
+    <div class="bens">
+      <div class="ben"><div class="ico">🔎</div><h3>Stop hunting for assets</h3><p>No more 20 minutes on free sites looking for one whoosh sound. It's already on your drive, named properly.</p></div>
+      <div class="ben"><div class="ico">⚡</div><h3>Deliver faster</h3><p>Drag, drop, render. Editors report cutting reel turnaround from hours to under 30 minutes.</p></div>
+      <div class="ben"><div class="ico">💰</div><h3>Charge more</h3><p>Graded footage with clean titles and sound design looks like a ₹15,000 edit, not a ₹2,000 one.</p></div>
+      <div class="ben"><div class="ico">🛡️</div><h3>Safe to monetise</h3><p>Music and footage are royalty-free. No copyright strikes on YouTube or Instagram.</p></div>
+      <div class="ben"><div class="ico">🧩</div><h3>Any software</h3><p>The files are in standard formats, so they open in Premiere Pro, After Effects, DaVinci Resolve, Final Cut, CapCut and VN.</p></div>
+      <div class="ben"><div class="ico">🎓</div><h3>Learn while you use it</h3><p>The included course walks a beginner from timeline basics to a paid client delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="ruler"></div>
+
+<section>
+  <div class="wrap">
+    <h2>How you get it</h2>
+    <div class="steps">
+      <div class="step"><h3>Pay ₹99</h3><p>UPI, card, net banking or wallet. Takes under a minute.</p></div>
+      <div class="step"><h3>Get the link instantly</h3><p>Access page opens immediately and the link is emailed to you as backup.</p></div>
+      <div class="step"><h3>Download and edit</h3><p>Save the folder once. It's yours for life, on any number of your own devices.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guar">
+      <div class="guar-head">
+        <div class="seal"><b>7</b><span>DAYS</span></div>
+        <div>
+          <h2>Your money is safe, and we're here after you buy</h2>
+          <p class="lead">Download it, open the folders, try the assets. If it isn't what you expected, email us within 7 days and we refund the full amount. No forms, no questions.</p>
+        </div>
+      </div>
+      <div class="guar-points">
+        <div class="gp"><div class="ico">🔒</div><b>Secure payment</b><span>Handled by an encrypted payment gateway. We never see your card details.</span></div>
+        <div class="gp"><div class="ico">⚡</div><b>Delivered in seconds</b><span>The access link opens right after payment and lands in your email too.</span></div>
+        <div class="gp"><div class="ico">💬</div><b>A real person replies</b><span>Stuck on a download or an install? Message us and you get a human, usually same day.</span></div>
+        <div class="gp"><div class="ico">♾️</div><b>Yours for life</b><span>Paid once. No renewals, and every future pack we add appears in your folder free.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ruler"></div>
+
+<section>
+  <div class="wrap" style="max-width:760px">
+    <h2>Questions before you buy</h2>
+    <details open><summary>Which editing software does this work with?</summary><p>All of them. Presets and plugins are built for Premiere Pro and After Effects, and every overlay, LUT, sound, font and clip is in a standard format that DaVinci Resolve, Final Cut, CapCut, VN and Filmora can import.</p></details>
+    <details><summary>Is it a subscription?</summary><p>No. ₹99 once. No renewals, no hidden charges, and future additions to the bundle come to you free.</p></details>
+    <details><summary>How big is the download and how is it delivered?</summary><p>It's delivered as a cloud drive folder split into labelled sub-folders, so you can download only the packs you need instead of one giant file. Keep a stable connection for the larger packs.</p></details>
+    <details><summary>Can I use this for paid client work?</summary><p>Yes. Commercial use is included, on unlimited projects. The music and footage are royalty-free, so monetised YouTube and Instagram content is safe. You can't resell or redistribute the bundle itself.</p></details>
+    <details><summary>I'm a complete beginner. Will I be able to use it?</summary><p>Yes. The included course starts from opening your first timeline. Most assets are drag-and-drop, so you can use them from day one.</p></details>
+    <details><summary>Will I get updates?</summary><p>Every new pack added to the bundle appears in the same folder you already have access to. You don't pay again.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>50,000+ assets. One folder. ₹99.</h2>
+    <p class="lead">Stop searching for assets. Open the folder and start cutting.</p>
+    <a href="#checkout" class="btn" style="display:inline-flex">Get instant access →</a>
+    <div class="count" data-count style="max-width:330px;margin-left:auto;margin-right:auto">
+      <span class="lbl">Offer ends in</span>
+      <span class="clock"><span class="unit" data-h>00<i>HRS</i></span><span class="unit" data-m>00<i>MIN</i></span><span class="unit" data-s>00<i>SEC</i></span></span>
+    </div>
+    <p class="under-btn">Lifetime access · One-time payment · Instant download</p>
+    <div class="pay-row">
+      <span>UPI</span><span>Cards</span><span>Net banking</span><span>Wallets</span>
+    </div>
+    <div class="rzp">
+      <span>Secure payment by</span>
+      <img src="data:image/png;base64,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" alt="Razorpay">
+    </div>
+    <p class="rzp-note">Your payment is processed on Razorpay's encrypted gateway. Your card and UPI details never reach us.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Atomik Systems.</div>
+    <div><a href="#">Terms</a> &nbsp; <a href="#">Refund policy</a> &nbsp; <a href="#">Contact</a></div>
+  </div>
+</footer>
+
+<div class="buybar" id="buybar">
+  <div class="buybar-in">
+    <div class="bb-price">
+      <b>₹99</b><s>₹6,999</s>
+      <span>Instant download · Lifetime access</span>
+    </div>
+    <a href="#checkout" class="btn">Proceed to checkout</a>
+  </div>
+</div>
+
+<script>
+// countdown: resets at midnight local time
+(function(){
+  var els=document.querySelectorAll('[data-count]');
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var now=new Date(), end=new Date(now); end.setHours(24,0,0,0);
+    var t=Math.max(0,Math.floor((end-now)/1000));
+    var h=pad(Math.floor(t/3600)), m=pad(Math.floor(t%3600/60)), sec=pad(t%60);
+    els.forEach(function(e){
+      e.querySelector('[data-h]').innerHTML=h+'<i>HRS</i>';
+      e.querySelector('[data-m]').innerHTML=m+'<i>MIN</i>';
+      e.querySelector('[data-s]').innerHTML=sec+'<i>SEC</i>';
+    });
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+// load the YouTube player only when the poster is clicked
+document.getElementById('vplay').addEventListener('click', function(){
+  var f = document.createElement('iframe');
+  f.src = 'https://www.youtube.com/embed/FYCDk-VasxQ?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+  f.title = 'Inside the bundle: full folder walkthrough';
+  f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  f.allowFullscreen = true;
+  f.setAttribute('frameborder','0');
+  document.getElementById('vwrap').appendChild(f);
+  this.remove();
+});
+
+// sticky buy bar after hero price box scrolls past
+var bar = document.getElementById('buybar'), anchor = document.getElementById('buy');
+function sync(){
+  var past = anchor.getBoundingClientRect().bottom < 0;
+  bar.classList.toggle('show', past);
+}
+window.addEventListener('scroll', sync, {passive:true});
+window.addEventListener('resize', sync);
+sync();
+</script>
+</body>
+</html>
