@@ -36,3 +36,12 @@ function sync(){
 window.addEventListener('scroll', sync, {passive:true});
 window.addEventListener('resize', sync);
 sync();
+
+// relay clicks on the styled CTAs to the hidden Razorpay payment button
+document.querySelectorAll('.rzp-trigger').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var rzpBtn = document.querySelector('#rzpHidden .razorpay-payment-button a, #rzpHidden a');
+    if (rzpBtn) rzpBtn.click();
+  });
+});
