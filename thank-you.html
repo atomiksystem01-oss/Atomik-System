@@ -10,8 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  .ty-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 0}
-  .ty-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:40px;max-width:600px;width:100%;text-align:center}
+  body{padding-bottom:0}
+  .ty-wrap{min-height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;padding:40px var(--pad)}
+  .ty-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:40px;max-width:600px;width:100%;margin:0 auto;text-align:center}
+  @media (max-width:520px){
+    .ty-card{padding:28px 20px;border-radius:14px}
+    .ty-link{padding:14px}
+    .ty-link .t b{font-size:14px}
+    .ty-link .go{display:none}
+  }
   .ty-check{width:56px;height:56px;border-radius:50%;background:#1F3B2C;color:#4ADE80;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 18px}
   .ty-card h1{font-size:clamp(24px,3.4vw,30px);margin-bottom:8px}
   .ty-card p.lead{margin-bottom:0}
