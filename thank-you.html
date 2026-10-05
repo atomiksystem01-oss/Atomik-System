@@ -34,6 +34,13 @@
   .ty-link .go{color:var(--muted);font-size:14px}
   .ty-note{font-size:13px;color:var(--muted);margin-top:22px;line-height:1.5}
   .ty-note a{color:var(--cream)}
+
+  .ty-gate-form{display:flex;flex-direction:column;gap:12px;margin-top:26px;text-align:left}
+  .ty-gate-form input{background:var(--panel-2);border:1px solid var(--line);border-radius:10px;
+    padding:13px 15px;font-size:15px;color:var(--cream);font-family:var(--body);width:100%}
+  .ty-gate-form input:focus{outline:2px solid #4ADE80;outline-offset:1px}
+  .ty-gate-form .err{font-size:13px;color:#FF6B6B;display:none}
+  .ty-gate-form .hint{font-size:12.5px;color:var(--muted);text-align:center;margin-top:2px}
 </style>
 </head>
 <body>
@@ -48,26 +55,92 @@
   <div class="wrap">
     <div class="ty-card">
       <div class="ty-check">✓</div>
-      <h1>Payment successful. Welcome in.</h1>
-      <p class="lead">Your access to the full bundle is ready below. Save these links — you can come back to this page anytime.</p>
 
-      <div class="ty-links">
-        <a class="ty-link" href="https://drive.google.com/drive/folders/1wgUm0Jf2M52-FLd83yjN2pjjV4WEFDEf" target="_blank" rel="noopener">
-          <span class="ico">🎬</span>
-          <span class="t"><b>Video Editing Bundle</b><span>Main drive folder — presets, FX, overlays, courses</span></span>
-          <span class="go">Open →</span>
-        </a>
-        <a class="ty-link" href="https://drive.google.com/drive/folders/1a3whNClw2gZii3gGwjPRkpqFRuzcbbAs" target="_blank" rel="noopener">
-          <span class="ico">📦</span>
-          <span class="t"><b>Ultimate Asset Folder for Editors</b><span>Bonus pack — LUTs, transitions, sound effects &amp; more</span></span>
-          <span class="go">Open →</span>
-        </a>
+      <div id="tyGate">
+        <h1>Payment successful. Welcome in.</h1>
+        <p class="lead">Enter the email you'd like your access confirmation sent to — the bundle links unlock right after.</p>
+        <form class="ty-gate-form" id="tyGateForm">
+          <input type="email" id="tyEmail" placeholder="you@email.com" autocomplete="email" required>
+          <a href="#" class="btn" id="tyGateBtn" style="display:flex;align-items:center;justify-content:center">Unlock my access →</a>
+          <p class="err" id="tyGateErr">Please enter a valid email address.</p>
+          <p class="hint">We'll only use this to help you recover access if you lose this page.</p>
+        </form>
       </div>
 
-      <p class="ty-note">Trouble accessing the folders? Request access from within the Drive page, or email us and we'll sort it right away.</p>
+      <div id="tyContent" style="display:none">
+        <h1>Payment successful. Welcome in.</h1>
+        <p class="lead">Your access to the full bundle is ready below. Save these links — you can come back to this page anytime.</p>
+
+        <div class="ty-links">
+          <a class="ty-link" href="https://drive.google.com/drive/folders/1wgUm0Jf2M52-FLd83yjN2pjjV4WEFDEf" target="_blank" rel="noopener">
+            <span class="ico">🎬</span>
+            <span class="t"><b>Video Editing Bundle</b><span>Main drive folder — presets, FX, overlays, courses</span></span>
+            <span class="go">Open →</span>
+          </a>
+          <a class="ty-link" href="https://drive.google.com/drive/folders/1a3whNClw2gZii3gGwjPRkpqFRuzcbbAs" target="_blank" rel="noopener">
+            <span class="ico">📦</span>
+            <span class="t"><b>Ultimate Asset Folder for Editors</b><span>Bonus pack — LUTs, transitions, sound effects &amp; more</span></span>
+            <span class="go">Open →</span>
+          </a>
+        </div>
+
+        <p class="ty-note">Trouble accessing the folders? Email <a href="mailto:atomiksystem01@gmail.com">atomiksystem01@gmail.com</a> and we'll sort it right away.</p>
+      </div>
+
     </div>
   </div>
 </div>
+
+<script>
+  // Google Apps Script web app /exec URL — logs each email and notifies atomiksystem01@gmail.com
+  var APPS_SCRIPT_URL = 'PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE';
+
+  (function(){
+    var gate = document.getElementById('tyGate');
+    var content = document.getElementById('tyContent');
+    var form = document.getElementById('tyGateForm');
+    var emailInput = document.getElementById('tyEmail');
+    var btn = document.getElementById('tyGateBtn');
+    var err = document.getElementById('tyGateErr');
+
+    // already unlocked earlier this session? skip straight to the links
+    if (sessionStorage.getItem('vaultUnlocked') === '1') {
+      gate.style.display = 'none';
+      content.style.display = 'block';
+    }
+
+    function unlock(){
+      sessionStorage.setItem('vaultUnlocked', '1');
+      gate.style.display = 'none';
+      content.style.display = 'block';
+    }
+
+    function submit(e){
+      if (e) e.preventDefault();
+      var email = emailInput.value.trim();
+      if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        err.style.display = 'block';
+        return;
+      }
+      err.style.display = 'none';
+      btn.textContent = 'Unlocking…';
+
+      if (APPS_SCRIPT_URL.indexOf('PASTE_YOUR') === -1) {
+        fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+          body: 'email=' + encodeURIComponent(email)
+        }).catch(function(){ /* even if logging fails, don't block a paying customer */ })
+          .then(unlock);
+      } else {
+        unlock();
+      }
+    }
+
+    form.addEventListener('submit', submit);
+    btn.addEventListener('click', submit);
+  })();
+</script>
 
 </body>
 </html>
