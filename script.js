@@ -36,34 +36,3 @@ function sync(){
 window.addEventListener('scroll', sync, {passive:true});
 window.addEventListener('resize', sync);
 sync();
-
-// relay clicks on the styled CTAs to the hidden Razorpay payment button
-var RZP_FALLBACK_URL = 'https://razorpay.com/payment-button/pl_TbvFVlayJX8p6w/view/';
-document.querySelectorAll('.rzp-trigger').forEach(function(btn){
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-
-    var rzpBtn = document.querySelector('#rzpHidden a');
-    if (rzpBtn) { rzpBtn.click(); return; }
-
-    // Razorpay's script hasn't rendered its button yet (slow load, or blocked by
-    // an ad/privacy blocker). Open a blank tab now, synchronously, inside this
-    // click — browsers block window.open() called later from a setTimeout, so
-    // we reserve the tab immediately and fill it in once we know the outcome.
-    var fallbackTab = window.open('', '_blank');
-    var tries = 0;
-    (function tryClick(){
-      rzpBtn = document.querySelector('#rzpHidden a');
-      if (rzpBtn) {
-        if (fallbackTab) fallbackTab.close();
-        rzpBtn.click();
-        return;
-      }
-      tries++;
-      if (tries < 20) { setTimeout(tryClick, 150); return; }
-      // Script never loaded at all — send them to Razorpay's hosted page instead
-      if (fallbackTab) fallbackTab.location = RZP_FALLBACK_URL;
-      else window.open(RZP_FALLBACK_URL, '_blank', 'noopener');
-    })();
-  });
-});
