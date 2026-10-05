@@ -7,6 +7,9 @@
 
 var NOTIFY_TO = 'atomiksystem01@gmail.com';
 
+var VIDEO_BUNDLE_URL = 'https://drive.google.com/drive/folders/1wgUm0Jf2M52-FLd83yjN2pjjV4WEFDEf';
+var ULTIMATE_ASSET_URL = 'https://drive.google.com/drive/folders/1a3whNClw2gZii3gGwjPRkpqFRuzcbbAs';
+
 function doPost(e) {
   var email = ((e.parameter && e.parameter.email) || '').trim().toLowerCase();
 
@@ -32,6 +35,20 @@ function doPost(e) {
       (isNew ? '(new — added to the list)\n' : '(already on the list — link may have been shared)\n') +
       '\nTotal unique claims: ' + list.length +
       '\n\nAll claimed emails so far:\n' + joined
+  });
+
+  MailApp.sendEmail({
+    to: email,
+    subject: 'Your Editor\'s Vault access',
+    body:
+      'Hey,\n\n' +
+      'Thanks for grabbing the bundle — here are your two folders:\n\n' +
+      'Video Editing Bundle\n' + VIDEO_BUNDLE_URL + '\n\n' +
+      'Ultimate Asset Folder\n' + ULTIMATE_ASSET_URL + '\n\n' +
+      'Just click "Add shortcut to Drive" (or request access if it asks) and everything\'s yours to keep — download the whole thing or just the packs you need.\n\n' +
+      'If a link doesn\'t open or anything looks off, just reply to this email and I\'ll sort it out personally.\n\n' +
+      'Enjoy the bundle.\n' +
+      'The Editor\'s Vault'
   });
 
   return ContentService.createTextOutput(JSON.stringify({ ok: true, isNew: isNew }))
